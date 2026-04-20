@@ -84,7 +84,7 @@ class EnvConfigService {
       // Supabase
       SUPABASE_URL: process.env.SUPABASE_URL || '',
       SUPABASE_KEY: process.env.SUPABASE_KEY || '',
-      SUPABASE_STORAGE_BUCKET: process.env.SUPABASE_STORAGE_BUCKET || 'csm-uploads',
+      SUPABASE_STORAGE_BUCKET: process.env.SUPABASE_STORAGE_BUCKET || 'cms-uploads',
 
       // Rate Limiting
       RATE_LIMIT_WINDOW_MS: parseInt(process.env.RATE_LIMIT_WINDOW_MS || '900000'),

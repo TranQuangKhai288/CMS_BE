@@ -81,10 +81,10 @@ Add to crontab (`crontab -e`):
 
 ```bash
 # Daily backup at 2 AM
-0 2 * * * cd /path/to/CSM_BE && npm run db:backup rotation >> logs/backup.log 2>&1
+0 2 * * * cd /path/to/cms_BE && npm run db:backup rotation >> logs/backup.log 2>&1
 
 # Weekly cleanup on Sunday at 3 AM
-0 3 * * 0 cd /path/to/CSM_BE && npm run db:backup cleanup 30 >> logs/backup.log 2>&1
+0 3 * * 0 cd /path/to/cms_BE && npm run db:backup cleanup 30 >> logs/backup.log 2>&1
 ```
 
 ### Windows (Task Scheduler)
@@ -94,7 +94,7 @@ Add to crontab (`crontab -e`):
 3. Set trigger (e.g., Daily at 2:00 AM)
 4. Action: Start a program
    - Program: `cmd.exe`
-   - Arguments: `/c cd E:\JOB\CSM\CSM_BE && npm run db:backup rotation >> logs\backup.log 2>&1`
+   - Arguments: `/c cd E:\JOB\cms\cms_BE && npm run db:backup rotation >> logs\backup.log 2>&1`
 
 ## Backup Storage Best Practices
 
@@ -122,16 +122,16 @@ Periodically verify backups can be restored:
 
 ```bash
 # Create test database
-createdb csm_test
+createdb cms_test
 
 # Restore to test database
-DATABASE_URL=postgresql://user:pass@localhost:5432/csm_test npm run db:restore backups/backup-file.sql.gz --force
+DATABASE_URL=postgresql://user:pass@localhost:5432/cms_test npm run db:restore backups/backup-file.sql.gz --force
 
 # Verify data integrity
-psql -d csm_test -c "SELECT COUNT(*) FROM users;"
+psql -d cms_test -c "SELECT COUNT(*) FROM users;"
 
 # Drop test database
-dropdb csm_test
+dropdb cms_test
 ```
 
 ## Backup File Naming

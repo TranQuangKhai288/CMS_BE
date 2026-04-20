@@ -5,7 +5,7 @@ import logger from './common/utils/logger';
 
 const startServer = async () => {
   try {
-    logger.info('🚀 Starting CSM Backend...');
+    logger.info('🚀 Starting cms Backend...');
     logger.info(`📍 Environment: ${process.env.NODE_ENV || 'development'}`);
     logger.info(`🔧 Node Version: ${process.version}`);
 

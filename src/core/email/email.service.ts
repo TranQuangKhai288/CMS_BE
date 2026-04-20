@@ -97,7 +97,7 @@ class EmailService {
       <body>
         <div class="container">
           <div class="header">
-            <h1>Chào mừng đến với CSM</h1>
+            <h1>Chào mừng đến với cms</h1>
           </div>
           <div class="content">
             <p>Xin chào ${name},</p>
@@ -105,7 +105,7 @@ class EmailService {
             <p>Bạn đã có thể bắt đầu sử dụng hệ thống quản lý của chúng tôi.</p>
             <a href="#" class="button">Bắt đầu ngay</a>
             <p>Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ với chúng tôi.</p>
-            <p>Trân trọng,<br>Đội ngũ CSM</p>
+            <p>Trân trọng,<br>Đội ngũ cms</p>
           </div>
         </div>
       </body>
@@ -114,7 +114,7 @@ class EmailService {
 
     return this.send({
       to: email,
-      subject: 'Chào mừng bạn đến với CSM',
+      subject: 'Chào mừng bạn đến với cms',
       html,
     });
   }
@@ -153,7 +153,7 @@ class EmailService {
             </div>
             <p>Hoặc copy link sau vào trình duyệt:</p>
             <p style="word-break: break-all; color: #6366f1;">${resetUrl}</p>
-            <p>Trân trọng,<br>Đội ngũ CSM</p>
+            <p>Trân trọng,<br>Đội ngũ cms</p>
           </div>
         </div>
       </body>
@@ -162,7 +162,7 @@ class EmailService {
 
     return this.send({
       to: email,
-      subject: 'Đặt lại mật khẩu - CSM',
+      subject: 'Đặt lại mật khẩu - cms',
       html,
     });
   }
@@ -229,7 +229,7 @@ class EmailService {
             <div class="total">Tổng cộng: ${total.toLocaleString('vi-VN')} ₫</div>
             
             <p>Chúng tôi sẽ gửi email thông báo khi đơn hàng được giao.</p>
-            <p>Trân trọng,<br>Đội ngũ CSM</p>
+            <p>Trân trọng,<br>Đội ngũ cms</p>
           </div>
         </div>
       </body>
@@ -302,7 +302,7 @@ class EmailService {
             <p>Xin chào ${customerName},</p>
             <p>${statusInfo.message}</p>
             <p><strong>Mã đơn hàng:</strong> #${orderNumber}</p>
-            <p>Trân trọng,<br>Đội ngũ CSM</p>
+            <p>Trân trọng,<br>Đội ngũ cms</p>
           </div>
         </div>
       </body>

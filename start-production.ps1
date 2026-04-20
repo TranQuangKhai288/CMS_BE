@@ -1,6 +1,6 @@
 # Production startup script for Windows/PowerShell
 
-Write-Host "🚀 Starting CSM Backend in PRODUCTION mode..." -ForegroundColor Green
+Write-Host "🚀 Starting cms Backend in PRODUCTION mode..." -ForegroundColor Green
 Write-Host "=================================="
 
 # Check required environment variables

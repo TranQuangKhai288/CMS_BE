@@ -3,7 +3,7 @@
 
 set -e # Exit on error
 
-echo "🚀 Starting CSM Backend in PRODUCTION mode..."
+echo "🚀 Starting cms Backend in PRODUCTION mode..."
 echo "=================================="
 
 # Check required environment variables

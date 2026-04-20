@@ -1,5 +1,5 @@
 {
-  "name": "csm-backend",
+  "name": "cms-backend",
   "version": "1.0.0",
   "description": "E-commerce Admin CMS Backend",
   "main": "dist/main.js",

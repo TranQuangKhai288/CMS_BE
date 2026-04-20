@@ -12,5 +12,5 @@ jobs:
     steps:
       - name: Ping Render URL
         run: |
-          curl -I -X GET "https://csm-be-40du.onrender.com/health" \
+          curl -I -X GET "https://cms-be-40du.onrender.com/health" \
           -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"

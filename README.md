@@ -30,7 +30,7 @@ Backend API cho hệ thống quản lý Admin CMS cho các website bán hàng.
 ## 📁 Project Structure
 
 ```
-CSM_BE/
+cms_BE/
 ├── src/
 │   ├── config/           # Configuration files
 │   ├── common/           # Shared utilities, guards, constants
@@ -54,7 +54,7 @@ CSM_BE/
 
 ```bash
 git clone <repo-url>
-cd CSM_BE
+cd cms_BE
 ```
 
 #### 2. Start PostgreSQL và Redis với Docker
@@ -72,7 +72,7 @@ Docker sẽ tự động khởi chạy:
 - **PostgreSQL**: `localhost:5432`
   - User: `postgres`
   - Password: `postgres123`
-  - Database: `csm_db`
+  - Database: `cms_db`
 - **Redis**: `localhost:6379`
   - Password: `redis123`
 - **pgAdmin** (Optional): `http://localhost:5050`
@@ -129,7 +129,7 @@ Nếu bạn muốn cài đặt PostgreSQL và Redis thủ công:
 
 ```bash
 git clone <repo-url>
-cd CSM_BE
+cd cms_BE
 npm install
 ```
 

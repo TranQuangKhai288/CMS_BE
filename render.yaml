@@ -1,16 +1,16 @@
-# Render Blueprint for CSM E-Commerce Backend
+# Render Blueprint for cms E-Commerce Backend
 # https://render.com/docs/blueprint-spec
 
 services:
   # Backend API Service
   - type: web
-    name: csm-backend
+    name: cms-backend
     runtime: node
     region: singapore # Change to your preferred region
     plan: free # Free tier
     branch: main
-    buildCommand: npm install && npm run build:prod
-    startCommand: npm run start:prod
+    buildCommand: npm install && npx prisma generate && npm run build
+    startCommand: npm run deploy
     envVars:
       - key: NODE_ENV
         value: production
@@ -21,7 +21,7 @@ services:
       # Database - Auto-populated from render postgres
       - key: DATABASE_URL
         fromDatabase:
-          name: csm-database
+          name: cms-database
           property: connectionString
       # Redis - If using Redis Cloud/Upstash
       - key: REDIS_HOST
@@ -45,7 +45,7 @@ services:
       - key: SUPABASE_KEY
         sync: false
       - key: SUPABASE_STORAGE_BUCKET
-        value: csm-uploads
+        value: cms-uploads
       # Email Configuration
       - key: SMTP_HOST
         value: smtp.gmail.com
@@ -85,9 +85,9 @@ services:
 
 # PostgreSQL Database
 databases:
-  - name: csm-database
-    databaseName: csm_db
-    user: csm_user
+  - name: cms-database
+    databaseName: cms_db
+    user: cms_user
     plan: free # Free tier: 90 days, then $7/month
     region: singapore # Same region as web service
     ipAllowList: [] # Leave empty for Render services access

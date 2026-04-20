@@ -18,7 +18,7 @@ class SupabaseStorageService {
     }
 
     this.supabase = createClient(supabaseUrl, supabaseKey);
-    this.bucketName = process.env.SUPABASE_STORAGE_BUCKET || 'csm-uploads';
+    this.bucketName = process.env.SUPABASE_STORAGE_BUCKET || 'cms-uploads';
   }
 
   // Ensure bucket exists, create if not
