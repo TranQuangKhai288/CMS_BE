@@ -190,7 +190,7 @@ async function main() {
             : null;
 
         const orderData: any = {
-            orderNumber: `ORD${orderDate.getFullYear()}${String(orderDate.getMonth() + 1).padStart(2, '0')}${String(i + 1).padStart(4, '0')}`,
+            orderNumber: `ORD${orderDate.getFullYear()}${String(orderDate.getMonth() + 1).padStart(2, '0')}${String(i + 1).padStart(4, '0')}-${randomInt(1000, 9999)}`,
             customerId: customer.id,
             status,
             paymentStatus,

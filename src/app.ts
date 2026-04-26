@@ -37,7 +37,6 @@ class App {
   private initializeMiddlewares(): void {
     // Security
     this.app.use(helmet());
-    console.log(envConfig.get('CORS_ORIGIN'), 'envConfig');
     // CORS
     this.app.use(
       cors({
